@@ -3,6 +3,8 @@
 import { RiWhatsappLine } from "react-icons/ri";
 import Form from '../component/Form'
 import logo1 from '../image/logo1.png'
+import {NavLink} from 'react-router-dom'
+
 
 
 const header = () => {
@@ -13,9 +15,9 @@ const header = () => {
           <header>
             <a href="" className='logo'><img src={logo1} alt="" /></a>
             <ul>
-              <li><a href="#" className='active'>Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
             </ul>
           </header>
           <div className='content'>

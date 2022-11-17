@@ -1,5 +1,7 @@
 import React from 'react'
-import Amenities from './amenities'
+import Amenities from './Amenities'
+import data from './data'
+
 
 
 const Multipal = () => {
@@ -7,10 +9,18 @@ const Multipal = () => {
   return (
 
     <>
-    <Amenities
-      title2="azamkhan0087@gmail.com"
-      title="gym"
-      />
+      
+      {data.map((val) => {
+        return (
+
+          <Amenities
+            key={val.id}
+            title={val.title}
+            image={val.image}
+          />
+
+        )
+      })}
     </>
 
   )
